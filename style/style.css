@@ -1,0 +1,182 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    color: #222;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: #1e293b;
+    color: white;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.menu {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    flex-direction: column;
+    color: white;
+}
+/* // */
+
+main {
+    padding: 24px;
+}
+
+/* Skill Search */
+#cari-skill {
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-card {
+    padding: 16px;
+    border: 1px solid var(--color-border, #1e293b);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    padding: 16px 24px;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .skill-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .skill-card {
+        flex: 1 1 calc(33.333% - 16px);
+        margin: 8px;
+        color: #1e293b;
+    }
+}
+
+/* Back to Top Button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #1e293b;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+#backToTop:hover {
+  background: #334155;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+    position: absolute;
+    top: 64px;
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+/* */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    text-transform: lowercase;
+    letter-spacing: 10px;
+}
+
+.section1 {
+    background: #1e293b;
+    color: white;
+}
+
+.section2 {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.section3 {
+    background: #334155;
+    color: white;
+}
+
+.section4 {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.section5 {
+    background: #255097;
+    color: white;
+}
+
+.section6 {
+    background: #638819;
+    color: #1e293b;
+}
