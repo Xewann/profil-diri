@@ -1,20 +1,25 @@
 name: Deploy Static Site
- 
+
 on:
   push:
     branches: [main]
- 
+    paths:
+      - 'cv-diri/**'
+
 permissions:
   contents: read
   pages: write
   id-token: write
- 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    defaults:
+      run:
+        working-directory: ./cv-diri
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -25,6 +30,6 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './cv-diri/dist'
       - id: deployment
         uses: actions/deploy-pages@v4
